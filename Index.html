@@ -5,197 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ammal's Resume</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f0f2f5;
             font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            color: #333;
+            padding: 20px;
         }
-        .resume {
-            background-color: #fff;
-            max-width: 1000px;
-            margin: 20px auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-        .resume-header {
-            background-color: #343a40;
-            color: #fff;
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
             padding: 30px;
-            text-align: center;
-            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
-        .resume-header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        h1, h2, h5 {
+            color: #0056b3;
         }
-        .resume-header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .resume-header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-        }
-        .resume-body {
-            display: flex;
-            margin-top: 60px;
-        }
-        .left-col {
-            background-color: #212529;
-            color: #fff;
-            padding: 30px 20px;
-            width: 35%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .left-col h2 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #495057;
-            padding-bottom: 5px;
-        }
-        .left-col p, .left-col ul {
-            font-size: 1em;
-        }
-        .left-col ul {
-            padding-left: 0;
-            list-style: none;
-        }
-        .left-col ul li {
-            margin-bottom: 10px;
-        }
-        .right-col {
-            padding: 30px 20px;
-            width: 65%;
+        .text-center {
+            margin-bottom: 30px;
         }
         .resume-section {
             margin-bottom: 30px;
         }
         .resume-section h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
             margin-bottom: 20px;
-            font-size: 1.5em;
+            position: relative;
         }
-        .resume-section h5 {
-            font-size: 1.2em;
-            margin-bottom: 5px;
+        .resume-section h2::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background: #0056b3;
+            bottom: -2px;
+            left: 0;
         }
-        .resume-section p {
-            margin: 0 0 10px;
-            font-size: 1em;
-        }
-        .social-media p {
+        .contact-info {
+            font-size: 1.1em;
+            color: #666;
             display: flex;
-            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
-        .social-media i {
-            margin-right: 10px;
-            font-size: 1.2em;
+        .contact-info i {
+            margin-right: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .project-desc {
+            color: #555;
+        }
+        .list-unstyled li::before {
+            content: '\2022';
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+        .card {
+            border: none;
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #0056b3;
+            color: #fff;
+            font-weight: bold;
+        }
+        .badge {
+        font-size: 0.9rem;
+        color: white;
+            background-color: #0056b3;
+            margin-right: 5px;
         }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
-<div class="resume">
-    <div class="resume-header">
-        <img src="path/to/your/photo.jpg" alt="Ammal's Photo">
+<div class="container">
+    <div class="text-center">
         <h1>Ammal</h1>
-        <p>Web Developer</p>
-        <p>9910875127 | mdammal7862+resume@gmail.com | New Delhi, New Delhi</p>
+        <p class="contact-info">
+            <span><i class="fas fa-phone"></i> 9910875127</span>
+            <span><i class="fas fa-envelope"></i> mdammal7862+resume@gmail.com</span>
+            <span><i class="fas fa-map-marker-alt"></i> New Delhi, New Delhi</span>
+        </p>
     </div>
 
-    <div class="resume-body">
-        <div class="left-col">
-            <div class="resume-section about">
-                <h2>About Me</h2>
-                <p>Fast-paced, creative web developer with extensive knowledge of HTML, CSS, JavaScript, PHP and JQuery languages. Strong proficiency in visual design and user interface design.</p>
-            </div>
-            <div class="resume-section social-media">
-                <h2>Social Media</h2>
-                <p><i class="fab fa-facebook"></i> facebook.com</p>
-                <p><i class="fab fa-linkedin"></i> linkedin.com/yourprofile</p>
-                <p><i class="fab fa-twitter"></i> twitter.com</p>
-            </div>
-            <div class="resume-section languages">
-                <h2>Languages</h2>
-                <ul>
-                    <li>Hindi</li>
-                    <li>English</li>
-                </ul>
-            </div>
-            <div class="resume-section skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Communication Skills</li>
-                    <li>CSS</li>
-                    <li>SQL</li>
-                    <li>JavaScript</li>
-                    <li>JQuery</li>
-                    <li>HTML5</li>
-                    <li>PHP</li>
-                    <li>C/C++</li>
-                    <li>Java</li>
-                    <li>AJAX</li>
-                </ul>
+    <div class="resume-section">
+        <h2>Summary</h2>
+        <div class="card">
+            <div class="card-body">
+                Fast-paced, creative web developer with extensive knowledge of HTML, CSS, JavaScript, PHP, and JQuery languages. Strong proficiency in visual design and user interface design.
             </div>
         </div>
-        <div class="right-col">
-            <div class="resume-section">
-                <h2>Education</h2>
+    </div>
+
+    <div class="resume-section">
+        <h2>Skills</h2>
+        <div class="card">
+            <div class="card-body">
+                <!--span class="badge">Communication Skills</span-->
+                <span class="badge">PHP</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">CSS</span>
+                <span class="badge">SQL</span>
+                <span class="badge">JQuery</span>
+                <span class="badge">HTML5</span>
+                <span class="badge">C/C++</span>
+                <span class="badge">Java</span>
+                <span class="badge">AJAX</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <h2>Education</h2>
+        <div class="card">
+            <div class="card-body">
                 <h5>Indra Gandhi National Open University | New Delhi, New Delhi</h5>
                 <p>Bachelor of Computer Applications | 12/2024</p>
                 <p>The degree focuses on the design, development, and deployment of software systems with a special focus on the design and analysis of software security. Languages taught here are C, C++, Java, SQL, HTML-CSS-JS, PHP and some attributes of jQuery and AJAX.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
                 <h5>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</h5>
                 <p>12th | 07/2020</p>
-                <p>The field of Study was Commerce. Subjects: Accounts, Business, Economics, Mathematics, English and Physical Education.</p>
+                <p>The field of Study was Commerce. Subjects: Accounts, Business, Economics, Mathematics, English, and Physical Education.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
                 <h5>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</h5>
                 <p>10th | 06/2018</p>
-                <p>Subjects: Hindi, English, Maths, Science, Social Science and Punjabi.</p>
+                <p>Subjects: Hindi, English, Maths, Science, Social Science, and Punjabi.</p>
             </div>
+        </div>
+    </div>
 
-            <div class="resume-section">
-                <h2>Projects</h2>
-                <h5>Login Page</h5>
-                <p>Responsive webpage | 03/2024 - 05/2024</p>
-                <p>We designed this page to understand the workings of the backend process around data (using PHP) sent by the browser of the form (HTML Page) and fetching and storing the data into the local database (on Apache Server).</p>
-                <h5>Fancy LoginPage</h5>
-                <p>Using Bootstrap | 03/2024 - 04/2024</p>
-                <p>Understanding the concept of HTML's and Bootstrap's working mechanisms together.</p>
-                <h5>Microsoft Word's Ribbon</h5>
-                <p>Exploration of JS jargons | 05/2023 - 07/2023</p>
-                <p>An attempt to replicate Microsoft Word with all functionalities on the web page. And exploring the JS (JavaScript).</p>
-                <h5>Mini Project</h5>
-                <p>Understanding the Hover property | 06/2023 - 06/2023</p>
-                <p>To understand the concept of the Hover property of CSS.</p>
+    <div class="resume-section">
+        <h2>Projects</h2>
+        <div class="card">
+            <div class="card-header">
+                Login Page
             </div>
+            <div class="card-body">
+                <p class="project-desc">Responsive webpage | 03/2024 - 05/2024</p>
+                <p class="project-desc">We designed this page to understand the workings of the backend process around data (using PHP) sent by the browser of the form (HTML Page) and fetching and storing the data into the local database (on Apache Server).</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Fancy LoginPage
+            </div>
+            <div class="card-body">
+                <p class="project-desc">Using Bootstrap | 03/2024 - 04/2024</p>
+                <p class="project-desc">Understanding the concept of HTML's and Bootstrap's working mechanisms together.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Microsoft Word's Ribbon
+            </div>
+            <div class="card-body">
+                <p class="project-desc">Exploration of JS jargons | 05/2023 - 07/2023</p>
+                <p class="project-desc">An attempt to replicate Microsoft Word with all functionalities on the web page. And exploring the JS (JavaScript).</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Mini Project
+            </div>
+            <div class="card-body">
+                <p class="project-desc">Understanding the Hover property | 06/2023 - 06/2023</p>
+                <p class="project-desc">To understand the concept of the Hover property of CSS.</p>
+            </div>
+        </div>
+    </div>
 
-            <div class="resume-section">
-                <h2>Certificates</h2>
-                <ul>
-                    <li>PHP</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>C Language</li>
-                    <li>Java</li>
-                </ul>
+    <div class="resume-section">
+        <h2>Languages</h2>
+        <div class="card">
+            <div class="card-body">
+                <span class="badge">Hindi</span>
+                <span class="badge">English</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <h2>Certificates</h2>
+        <div class="card">
+            <div class="card-body">
+                <span class="badge">PHP</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">C Language</span>
+                <span class="badge">Java</span>
             </div>
         </div>
     </div>
 </div>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
